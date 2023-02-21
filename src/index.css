@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.mainContainer {
+  /* background-color: aquamarine; */
+  max-width: 1120px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header {
+  background-color: yellow;
+  text-align: center;
+  padding: 10px;
+}
+
+.innerContainer {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.testeContainer {
+  /* background-color: blue; */
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.buttons {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.buttonSound {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.textInputDiv {
+  padding-top: 10px;
+}
