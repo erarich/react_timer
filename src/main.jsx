@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-
 import Header from './layout/Header';
 import Section from './layout/Section';
+import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <> 
@@ -13,14 +12,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </main>
   </>
 )
-
-/*
-main (blue)
-  header (yellow)
-  section
-    div (blue)          -> main Stopwatch
-    div (greenyellow)   -> list of Stopwatches
-    div                 -> button to add Stopwatch
-
-
-*/

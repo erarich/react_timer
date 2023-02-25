@@ -1,12 +1,10 @@
 import Stopwatch from "../components/Stopwatch";
-import StopWatchElement from "../components/StopWatchElement";
 import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
 import RemoveCircleOutlineOutlinedIcon from '@mui/icons-material/RemoveCircleOutlineOutlined';
 import { v4 as uuidv4 } from 'uuid';
 import { IconButton } from '@mui/material';
 import { useState } from "react";
 import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
 
 const Section = () => {
 
@@ -14,7 +12,13 @@ const Section = () => {
   const [list, setList] = useState(initialList);
 
   const handleAdd = () => {
-    const newList = list.concat({id: uuidv4(), element: <StopWatchElement key={list.length} />});
+    const newList = list.concat({
+      id: uuidv4(), 
+      element:
+        <div className='Stopwatch--Element'>
+          <Stopwatch element={true} key={list.length} />
+        </div>
+      });
     setList(newList);
   }
 
@@ -26,43 +30,31 @@ const Section = () => {
   return (
     <section>
 
-      <div>
-
-        <header> 
-          <Typography variant="h4" component="h2">
-          &nbsp;STOPWATCH&nbsp;
-          </Typography>
-        </header>
-
-        <Divider sx={{ bgcolor: "primary.light" }}/>
-
-        <Stopwatch />
-
+      <div className='Stopwatch'>
+        <Stopwatch element={false}/>
       </div>
 
-      
-
-      <div className="listOfStopWatches">
-        <ul>
-          {list.map((item) => (
-            <li className='liss' 
-              key={item.id}>
-                {item.element}
-                <IconButton
-                  onClick={() => {handleRemove(item.id)}}
-                  aria-label="RemoveCircleOutlineOutlinedIcon">
-                    <RemoveCircleOutlineOutlinedIcon 
-                      fontSize="small"
-                      sx={[{'&:hover': {color: 'red',},},]}
-                    />
-                </IconButton>
-            </li> 
-          ))}
-        </ul>
-      </div>
+      <ul>
+        {list.map((item) => (
+          <li className='liss' 
+            key={item.id}>
+              {item.element}
+              <IconButton
+                onClick={() => {handleRemove(item.id)}}
+                aria-label="RemoveCircleOutlineOutlinedIcon">
+                  <RemoveCircleOutlineOutlinedIcon 
+                    fontSize="small"
+                    sx={[{'&:hover': {color: 'red',},},]}
+                  />
+              </IconButton>
+          </li> 
+        ))}
+      </ul>
 
       <div>
-        <p>Add more StopWatches</p>
+        <Typography variant="body1" >
+          Add more StopWatches
+        </Typography>
         <IconButton
           onClick={handleAdd}
           aria-label="AddCircleOutlineOutlinedIcon">

@@ -1,28 +1,40 @@
 * {
   padding: 0;
   margin: 0;
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  align-items: center;
+  border-bottom: solid;
+  border-width: 1px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: fit-content;
 }
 
 .mainContainer {
-  background-color: aquamarine;
-  max-width: 1120px;
   margin: 0 auto;
+  max-width: 1120px;
   width: fit-content;
 }
 
 .header {
-  background-color: yellow;
-  text-align: center;
   padding: 10px;
+  text-align: center;
 }
 
-
-
 /* MAIN STOPWATCH */
-
-.Stopwatch {
-  background-color: green;
-  
+.Stopwatch {  
   margin: 10px;
   padding: 10px;
   border: 1px solid #1976D2;
@@ -31,41 +43,31 @@
   color: #1976D2;
 }
 
+
+
 .Stopwatch--timer {
-  background-color: white;
-  margin-top: 20px;
   border: solid;
   border-color: #1976D2;
+
   border-width: 2px;
-  border-radius: 4px;
-  height: 52px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: 16px;
+
+  margin: 20px;
+  padding: 10px;
 }
 
 .buttons {
-  background-color: antiquewhite;
-  padding-top: 10px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  gap: 20px;
 }
-
-
- /* StopWatchElement component */
-
 
 .buttons--Element {
   display: flex;
-  flex-direction: row;
   gap: 20px;
-  justify-content: center;
-  align-items: center;
 }
 
 .Stopwatch--Element {
+  color: #1976D2;
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -77,32 +79,13 @@
 }
 
 .Stopwatch--timer--Element {
-  background-color: white;
   border: solid;
   border-color: #1976D2;
+
   border-width: 1px;
-  border-radius: 4px;
+  border-radius: 16px;
+
+  margin: 2px;
   padding: 2px;
 }
 
-.listOfStopWatches {
-  background-color: greenyellow;
-  display: flex;
-  flex-direction: column;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  align-items: center;
-  border-bottom: solid;
-  border-width: 1px;
-  width: fit-content;
-}

@@ -3,7 +3,7 @@ import { formatTime } from "./utils/FormatTime";
 import Button from "@mui/material/Button";
 import Typography from '@mui/material/Typography';
 
-const Stopwatch = () => {
+const Stopwatch = (props) => {
 
   const { time, start, pause, reset, status } = useTimer();
   let statusTimer = 'start'
@@ -25,22 +25,22 @@ const Stopwatch = () => {
     button = <Button onClick={start} variant="outlined">{checkStatusTimer()}</Button>
   }
 
+  console.log(props.element)
+
   return (
     <>    
-      <div className='Stopwatch'>
-
-        <div className='Stopwatch--timer'>
-          <Typography variant="h4" component="h2">
-            {formatTime(time)}
-          </Typography>
-        </div>
-
-        <div className='buttons'>
-          {button}
-          <Button onClick={reset} variant="outlined" color="error">reset</Button>
-        </div>
-
+     
+      <div className={props.element ? 'Stopwatch--timer--Element' : 'Stopwatch--timer'}>
+        <Typography variant={props.element ? 'h6' : 'h1'}>
+          {formatTime(time)}
+        </Typography>
       </div>
+
+      <div className={props.element ? 'buttons--Element' : 'buttons'}>
+        {button}
+        <Button onClick={reset} variant="outlined" color="error">reset</Button>
+      </div>
+
     </>
   )
 }
