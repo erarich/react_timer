@@ -4,10 +4,10 @@
 }
 
 .mainContainer {
-  /* background-color: aquamarine; */
+  background-color: aquamarine;
   max-width: 1120px;
   margin: 0 auto;
-  width: 100%;
+  width: fit-content;
 }
 
 .header {
@@ -16,15 +16,13 @@
   padding: 10px;
 }
 
-.innerContainer {
-  /* background-color: red; */
-  /* display: flex;
-  flex-direction: column; */
-  justify-content: center;
-}
 
-.testeContainer {
-  /* background-color: blue; */
+
+/* MAIN STOPWATCH */
+
+.Stopwatch {
+  background-color: green;
+  
   margin: 10px;
   padding: 10px;
   border: 1px solid #1976D2;
@@ -33,28 +31,7 @@
   color: #1976D2;
 }
 
-
-.buttons {
-  padding-top: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.buttonSound {
-  padding-top: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.textInputDiv {
-  margin-top: 20px;
-  background-color: white;
-}
-
-.timerStopwatch {
+.Stopwatch--timer {
   background-color: white;
   margin-top: 20px;
   border: solid;
@@ -67,11 +44,20 @@
   align-items: center;
 }
 
+.buttons {
+  background-color: antiquewhite;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
 
  /* StopWatchElement component */
 
 
-.buttonsStopWatchElement {
+.buttons--Element {
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -79,7 +65,7 @@
   align-items: center;
 }
 
-.StopWatchElement {
+.Stopwatch--Element {
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -90,7 +76,7 @@
   width: fit-content;
 }
 
-.StopWatchElementDisplay {
+.Stopwatch--timer--Element {
   background-color: white;
   border: solid;
   border-color: #1976D2;
@@ -100,6 +86,7 @@
 }
 
 .listOfStopWatches {
+  background-color: greenyellow;
   display: flex;
   flex-direction: column;
 }

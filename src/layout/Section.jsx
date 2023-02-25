@@ -5,6 +5,8 @@ import RemoveCircleOutlineOutlinedIcon from '@mui/icons-material/RemoveCircleOut
 import { v4 as uuidv4 } from 'uuid';
 import { IconButton } from '@mui/material';
 import { useState } from "react";
+import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
 
 const Section = () => {
 
@@ -22,39 +24,54 @@ const Section = () => {
   }
   
   return (
-    <section className='innerContainer'>
-      <Stopwatch />
+    <section>
 
-        <div className="listOfStopWatches">
-          <ul>
-            {list.map((item) => (
-              <li className='liss' 
-                key={item.id}>
-                  {item.element}
-                  <IconButton
-                    onClick={() => {handleRemove(item.id)}}
-                    aria-label="RemoveCircleOutlineOutlinedIcon">
-                      <RemoveCircleOutlineOutlinedIcon 
-                        fontSize="small"
-                        sx={[{'&:hover': {color: 'red',},},]}
-                      />
-                  </IconButton>
-              </li> 
-            ))}
-          </ul>
-        </div>
+      <div>
 
-        <div>
-          <p>Add more StopWatches</p>
-          <IconButton
-            onClick={handleAdd}
-            aria-label="AddCircleOutlineOutlinedIcon">
-            <AddCircleOutlineOutlinedIcon 
-              fontSize='large' 
-              sx={[{'&:hover': {color: 'green',},},]}
-            />
-          </IconButton>
-        </div>
+        <header> 
+          <Typography variant="h4" component="h2">
+          &nbsp;STOPWATCH&nbsp;
+          </Typography>
+        </header>
+
+        <Divider sx={{ bgcolor: "primary.light" }}/>
+
+        <Stopwatch />
+
+      </div>
+
+      
+
+      <div className="listOfStopWatches">
+        <ul>
+          {list.map((item) => (
+            <li className='liss' 
+              key={item.id}>
+                {item.element}
+                <IconButton
+                  onClick={() => {handleRemove(item.id)}}
+                  aria-label="RemoveCircleOutlineOutlinedIcon">
+                    <RemoveCircleOutlineOutlinedIcon 
+                      fontSize="small"
+                      sx={[{'&:hover': {color: 'red',},},]}
+                    />
+                </IconButton>
+            </li> 
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <p>Add more StopWatches</p>
+        <IconButton
+          onClick={handleAdd}
+          aria-label="AddCircleOutlineOutlinedIcon">
+          <AddCircleOutlineOutlinedIcon 
+            fontSize='large' 
+            sx={[{'&:hover': {color: 'green',},},]}
+          />
+        </IconButton>
+      </div>
 
     </section>
   )

@@ -13,3 +13,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </main>
   </>
 )
+
+/*
+main (blue)
+  header (yellow)
+  section
+    div (blue)          -> main Stopwatch
+    div (greenyellow)   -> list of Stopwatches
+    div                 -> button to add Stopwatch
+
+
+*/

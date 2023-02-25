@@ -2,7 +2,6 @@ import { useTimer } from 'use-timer';
 import { formatTime } from "./utils/FormatTime";
 import Button from "@mui/material/Button";
 import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
 
 const Stopwatch = () => {
 
@@ -27,30 +26,22 @@ const Stopwatch = () => {
   }
 
   return (
-  <>
-    <div className='testeContainer'>
+    <>    
+      <div className='Stopwatch'>
 
-      <header> 
-        <Typography variant="h4" component="h2">
-        &nbsp;STOPWATCH&nbsp;
-        </Typography>
-      </header>
+        <div className='Stopwatch--timer'>
+          <Typography variant="h4" component="h2">
+            {formatTime(time)}
+          </Typography>
+        </div>
 
-      <Divider sx={{ bgcolor: "primary.light" }}/>
+        <div className='buttons'>
+          {button}
+          <Button onClick={reset} variant="outlined" color="error">reset</Button>
+        </div>
 
-      <div className='timerStopwatch'>
-        <Typography variant="h4" component="h2">
-          {formatTime(time)}
-        </Typography>
       </div>
-
-      <div className='buttons'>
-        {button}
-        <Button onClick={reset} variant="outlined" color="error">reset</Button>
-      </div>
-    </div>
-  </>
-
+    </>
   )
 }
 

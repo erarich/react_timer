@@ -27,15 +27,15 @@ const StopWatchElement = () => {
 
   return (
     <>
-      <div className='StopWatchElement'>
+      <div className='Stopwatch--Element'>
 
-        <div className='StopWatchElementDisplay'>
+        <div className='Stopwatch--timer--Element'>
           <Typography variant="h6" component="h2">
             {formatTime(time)}
           </Typography>
         </div>
 
-        <div className='buttonsStopWatchElement'>
+        <div className='buttons--Element'>
           {button}
           <Button onClick={reset} variant="outlined" color="error">reset</Button>
         </div>
