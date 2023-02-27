@@ -15,7 +15,7 @@ const Section = () => {
     const newList = list.concat({
       id: uuidv4(), 
       element:
-        <div className='Stopwatch--Element'>
+        <div className='stopwatch-item'>
           <Stopwatch element={true} key={list.length} />
         </div>
       });
@@ -30,7 +30,7 @@ const Section = () => {
   return (
     <section>
 
-      <div className='Stopwatch'>
+      <div className='stopwatch-main'>
         <Stopwatch element={false}/>
       </div>
 

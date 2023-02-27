@@ -25,18 +25,16 @@ const Stopwatch = (props) => {
     button = <Button onClick={start} variant="outlined">{checkStatusTimer()}</Button>
   }
 
-  console.log(props.element)
-
   return (
     <>    
      
-      <div className={props.element ? 'Stopwatch--timer--Element' : 'Stopwatch--timer'}>
+      <div className={props.element ? 'timer timer-element--margin-and-padding-smaller' : 'timer timer--margin-and-padding-bigger'}>
         <Typography variant={props.element ? 'h6' : 'h1'}>
           {formatTime(time)}
         </Typography>
       </div>
 
-      <div className={props.element ? 'buttons--Element' : 'buttons'}>
+      <div className={props.element ? 'buttons-div buttons-div--content-gap' : 'buttons-div buttons-div--content-justify-content'}>
         {button}
         <Button onClick={reset} variant="outlined" color="error">reset</Button>
       </div>

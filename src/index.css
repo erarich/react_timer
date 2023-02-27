@@ -4,22 +4,12 @@
   text-align: center;
 }
 
-ul {
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
 li {
-  align-items: center;
   border-bottom: solid;
   border-width: 1px;
   display: flex;
   flex-direction: row;
-  gap: 20px;
-  width: fit-content;
+  justify-content: center;
 }
 
 .mainContainer {
@@ -30,62 +20,52 @@ li {
 
 .header {
   padding: 10px;
-  text-align: center;
+  background-color: #1976D2;
+  text-align: left;
 }
 
-/* MAIN STOPWATCH */
-.Stopwatch {  
+.stopwatch-main {
+  border: 1px solid #adb3ba;
+  border-radius: 8px;
+  color: #1976D2;
   margin: 10px;
   padding: 10px;
-  border: 1px solid #1976D2;
-  border-radius: 8px;
-  text-align: center;
-  color: #1976D2;
 }
 
+.stopwatch-item {
+  align-items: center;
+  color: #1976D2;
+  display: flex;
+  gap: 20px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
 
-
-.Stopwatch--timer {
+.timer {
   border: solid;
   border-color: #1976D2;
-
-  border-width: 2px;
+  border-width: 1px;
   border-radius: 16px;
+}
 
+.timer--margin-and-padding-bigger {
   margin: 20px;
   padding: 10px;
 }
 
-.buttons {
-  display: flex;
-  justify-content: space-between;
-}
-
-.buttons--Element {
-  display: flex;
-  gap: 20px;
-}
-
-.Stopwatch--Element {
-  color: #1976D2;
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  width: fit-content;
-}
-
-.Stopwatch--timer--Element {
-  border: solid;
-  border-color: #1976D2;
-
-  border-width: 1px;
-  border-radius: 16px;
-
+.timer-element--margin-and-padding-smaller {
   margin: 2px;
   padding: 2px;
 }
 
+.buttons-div {
+  display: flex;
+}
+
+.buttons-div--content-justify-content {
+  justify-content: space-between;
+}
+
+.buttons-div--content-gap {
+  gap: 20px;
+}
