@@ -1,12 +1,14 @@
 import Stopwatch from "../components/Stopwatch";
-import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
-import RemoveCircleOutlineOutlinedIcon from '@mui/icons-material/RemoveCircleOutlineOutlined';
 import { v4 as uuidv4 } from 'uuid';
-import { IconButton } from '@mui/material';
 import { useState } from "react";
 import Typography from '@mui/material/Typography';
+import { allStates } from '../main'
+import { stopwatchButtonStyle } from "../components/Stopwatch";
+import { buttonStyle } from "./Header";
 
 const Section = () => {
+
+  const english = allStates((state) => state.english)
 
   let initialList = []
   const [list, setList] = useState(initialList);
@@ -39,30 +41,24 @@ const Section = () => {
           <li className='liss' 
             key={item.id}>
               {item.element}
-              <IconButton
-                onClick={() => {handleRemove(item.id)}}
-                aria-label="RemoveCircleOutlineOutlinedIcon">
-                  <RemoveCircleOutlineOutlinedIcon 
-                    fontSize="small"
-                    sx={[{'&:hover': {color: 'red',},},]}
-                  />
-              </IconButton>
+
+              <div className='stopwatch-item'>
+                <button 
+                  onClick={() => {handleRemove(item.id)}} 
+                  style={stopwatchButtonStyle}>
+                    {english ? "remove" : "remover"}
+                </button>
+              </div>
           </li> 
         ))}
       </ul>
 
       <div>
-        <Typography variant="body1" >
-          Add more StopWatches
-        </Typography>
-        <IconButton
-          onClick={handleAdd}
-          aria-label="AddCircleOutlineOutlinedIcon">
-          <AddCircleOutlineOutlinedIcon 
-            fontSize='large' 
-            sx={[{'&:hover': {color: 'green',},},]}
-          />
-        </IconButton>
+        <button style={buttonStyle} onClick={handleAdd}>
+          <Typography variant='body1' sx={[{color: '#BB86FC',},]}>
+            {english ? "Add more stopwatches" : "Adicione mais cronômetros"}
+          </Typography>
+        </button>
       </div>
 
     </section>

@@ -2,30 +2,49 @@
   padding: 0;
   margin: 0;
   text-align: center;
+  background-color: #121212;
 }
 
 li {
-  border-bottom: solid;
-  border-width: 1px;
+  background: linear-gradient(90deg, rgba(18,18,18,1) 10%, rgba(25,23,27,0.25392155153076856) 20%, rgba(31,27,36,1) 30%, rgba(31,27,36,1) 70%, rgba(25,23,28,0.25392155153076856) 80%, rgba(18,18,18,1) 90%);
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
+li button {
+  cursor: pointer;
+}
+
 .mainContainer {
   margin: 0 auto;
   max-width: 1120px;
-  width: fit-content;
 }
 
 .header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
   padding: 10px;
-  background-color: #1976D2;
   text-align: left;
 }
 
+.header a {
+  text-decoration: none;
+}
+
+.header__buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.iconbutton {
+  background-color: #1976D2;
+}
+
 .stopwatch-main {
-  border: 1px solid #adb3ba;
+  background-color: #1F1B24;
+  border: 1px solid #BB86FC;
   border-radius: 8px;
   color: #1976D2;
   margin: 10px;
@@ -34,16 +53,19 @@ li {
 
 .stopwatch-item {
   align-items: center;
+  background-color: #1F1B24;
   color: #1976D2;
   display: flex;
   gap: 20px;
   padding-top: 4px;
   padding-bottom: 4px;
+  padding-left: 20px;
 }
 
 .timer {
+  background-color: #121212;
   border: solid;
-  border-color: #1976D2;
+  border-color: #BB86FC;
   border-width: 1px;
   border-radius: 16px;
 }
@@ -54,12 +76,18 @@ li {
 }
 
 .timer-element--margin-and-padding-smaller {
+  background-color: #121212;
   margin: 2px;
   padding: 2px;
 }
 
 .buttons-div {
+  background-color: #1F1B24;
   display: flex;
+}
+
+.buttons-div button {
+  cursor: pointer;
 }
 
 .buttons-div--content-justify-content {
