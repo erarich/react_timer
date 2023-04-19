@@ -1,9 +1,9 @@
 
 # Stopwatches
 
-Stopwatch is a simple yet versatile open-source web application that allows users to track time for various tasks and projects. It comes with a built-in stopwatch that is easy to use and includes features such as start, stop, and reset buttons.
+Stopwatch is a simple yet versatile open-source web application that allows users to track time for various tasks and projects. It comes with a built-in stopwatch that is easy to use and includes features such as start, stop, and reset buttons. 
 
-Stopwatch also includes the option to add more stopwatches.
+Stopwatch also includes the option to add more stopwatches and to change between English and Portuguese.
 
 
 
